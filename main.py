@@ -12,7 +12,7 @@ import speech  # работа с речью
 
 bot = telebot.TeleBot("5246247569:AAG6njKqX8QDcjlkmDUsXqiTgj7v4I0530k")  # Создаем экземпляр бота
 
-
+#gjkldfjgldfkj
 # -----------------------------------------------------------------------
 # Функция, обрабатывающая команды
 @bot.message_handler(commands="start")
