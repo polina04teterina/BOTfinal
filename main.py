@@ -1,4 +1,4 @@
-# Телеграм-бот v.004
+
 
 import telebot  # pyTelegramBotAPI 4.3.1
 from telebot import types
@@ -193,9 +193,9 @@ def callback_worker(call):
 
 # -----------------------------------------------------------------------
 def send_help(bot, chat_id):
-    bot.send_message(chat_id, "Автор: Швец Андрей")
+    bot.send_message(chat_id, "Автор: Полина ")
     markup = types.InlineKeyboardMarkup()
-    btn1 = types.InlineKeyboardButton(text="Напишите автору", url="https://t.me/user59387")
+    btn1 = types.InlineKeyboardButton(text="Напишите автору", url="https://t.me/@pixie_po")
     markup.add(btn1)
     img = open('Швец Андрей.png', 'rb')
     bot.send_photo(chat_id, img, reply_markup=markup)
@@ -203,6 +203,8 @@ def send_help(bot, chat_id):
     bot.send_message(chat_id, "Активные пользователи чат-бота:")
     for el in menuBot.Users.activeUsers:
         bot.send_message(chat_id, menuBot.Users.activeUsers[el].getUserHTML(), parse_mode='HTML')
+
+
 
 # ---------------------------------------------------------------------
 

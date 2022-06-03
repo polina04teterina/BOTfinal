@@ -26,8 +26,10 @@ def get_text_messages(bot, cur_user, message):
     elif ms_text == "Угадай кто?":
         get_ManOrNot(bot, chat_id)
 
-
-
+    elif ms_text == "Прислать курсы":
+        data = requests.get('https://www.cbr-xml-daily.ru/daily_json.js').json()
+        rate_message = "1 Доллар США равен " + str(data['Valute']['USD']['Value']) + " руб."
+        bot.send_message(chat_id, text=rate_message)
 
 
 # -----------------------------------------------------------------------
